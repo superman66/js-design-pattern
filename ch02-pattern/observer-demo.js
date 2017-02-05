@@ -1,4 +1,4 @@
-var observer = {};
+let observer = {};
 observer.clientList = [];
 
 observer.listen = function(key, fn) {
@@ -20,8 +20,8 @@ observer.publish = function() {
 }
 
 
-observer.listen('A',function (name) { // 增加一个订阅者
-  console.log(name + 'receive');
+observer.listen('A',function (data) { // 增加一个订阅者
+  console.log(data);
 })
 
 observer.listen('B', function (name) { // 增加一个订阅者
